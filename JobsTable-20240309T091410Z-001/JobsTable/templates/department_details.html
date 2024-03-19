@@ -123,12 +123,13 @@ color: white; /* Set text color */
 
 {% if request.path not in ['/', '/home', '/about'] %}
 <div class="sidebar" style="height: calc(100vh - 130px);"> <!-- 130px is the combined height of navbar and footer -->
-    <a href="/admin/application">Applications</a>
+    <a href="{{ url_for ('applications')}}">Applications</a>
     <a href="{{ url_for('Admin') }}">Post Jobs</a>
     <a href="{{ url_for('department_details') }}">Departments</a>
     <p>Logged in as: </p>
     <p>Admin</p>
     <a href="/logout">Logout</a>
+
     <!-- Add more links for other admin pages -->
 </div>
 {% endif %}

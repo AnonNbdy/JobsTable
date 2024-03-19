@@ -366,6 +366,7 @@ def track_application():
             return render_template('track_application.html',applications=application)
         else:
             print(user.email)
+        return render_template('track_application.html',applications=application)
 
 @app.route('/track', methods=['POST', 'GET'])
 @login_required
